@@ -1,23 +1,65 @@
-/* =========================================
-   CONFIGURACIÓN GENERAL
-========================================= */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    color: #222;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #11143a,
+            #050617 70%,
+            #02030d
+        );
+
+    color: white;
+
     line-height: 1.6;
+
     transition: 0.3s;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   FONDO GALAXIA
+========================================= */
+
+#galaxyCanvas {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.contenido {
+
+    position: relative;
+
+    z-index: 1;
 }
 
 
@@ -26,36 +68,61 @@ body {
 ========================================= */
 
 header {
-    background-color: #111;
+
+    background: rgba(5, 5, 20, 0.85);
+
+    backdrop-filter: blur(10px);
+
     color: white;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     padding: 15px 5%;
 
     position: sticky;
+
     top: 0;
 
     z-index: 1000;
+
+    border-bottom: 1px solid rgba(0, 191, 255, 0.3);
 }
+
 
 .logo {
+
     font-size: 24px;
+
     font-weight: bold;
+
+    color: #00d9ff;
+
+    text-shadow:
+        0 0 10px #00d9ff,
+        0 0 20px #0077ff;
 }
 
+
 nav {
+
     display: flex;
+
     gap: 15px;
 
     flex-wrap: wrap;
+
     justify-content: center;
 }
 
+
 nav a {
+
     color: white;
+
     text-decoration: none;
 
     font-weight: bold;
@@ -63,12 +130,25 @@ nav a {
     transition: 0.3s;
 }
 
+
 nav a:hover {
-    color: #00bfff;
+
+    color: #00d9ff;
+
+    text-shadow:
+        0 0 8px #00d9ff;
 }
 
+
 #modoBtn {
-    background-color: #00bfff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #006eff,
+            #a000ff
+        );
+
     color: white;
 
     border: none;
@@ -78,10 +158,17 @@ nav a:hover {
     border-radius: 8px;
 
     cursor: pointer;
+
+    transition: 0.3s;
 }
 
+
 #modoBtn:hover {
-    background-color: #008fc7;
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 15px #008cff;
 }
 
 
@@ -90,21 +177,13 @@ nav a:hover {
 ========================================= */
 
 .hero {
-    min-height: 80vh;
 
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.6)
-        ),
-        url("imagenes/foto2.jpeg");
-
-    background-size: cover;
-    background-position: center;
+    min-height: 90vh;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -114,38 +193,112 @@ nav a:hover {
     padding: 30px;
 }
 
+
 .hero-contenido {
-    max-width: 800px;
+
+    max-width: 850px;
+
+    background:
+        rgba(4, 5, 25, 0.55);
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(8px);
+
+    border:
+        1px solid rgba(0, 191, 255, 0.25);
+
+    box-shadow:
+        0 0 40px rgba(0, 100, 255, 0.2);
 }
+
+
+.planeta {
+
+    font-size: 70px;
+
+    margin-bottom: 10px;
+
+    animation:
+        flotar 4s ease-in-out infinite;
+
+    filter:
+        drop-shadow(0 0 15px #4e9cff);
+}
+
+
+@keyframes flotar {
+
+    0% {
+        transform: translateY(0px)
+                   rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px)
+                   rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0px)
+                   rotate(0deg);
+    }
+}
+
 
 .hero h1 {
+
     font-size: 50px;
+
     margin-bottom: 20px;
+
+    text-shadow:
+        0 0 10px #00d9ff,
+        0 0 25px #006eff;
 }
 
+
 .hero p {
+
     font-size: 20px;
+
     margin-bottom: 30px;
 }
 
+
 .hero button {
+
     padding: 14px 25px;
 
     border: none;
 
     border-radius: 8px;
 
-    background-color: #00bfff;
+    background:
+        linear-gradient(
+            135deg,
+            #00bfff,
+            #7b00ff
+        );
 
     color: white;
 
     font-size: 18px;
 
     cursor: pointer;
+
+    transition: 0.3s;
 }
 
+
 .hero button:hover {
-    background-color: #008fc7;
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 20px #00bfff;
 }
 
 
@@ -154,26 +307,44 @@ nav a:hover {
 ========================================= */
 
 .seccion {
-    padding: 70px 8%;
+
+    padding: 80px 8%;
+
+    background:
+        rgba(2, 4, 20, 0.62);
+
+    backdrop-filter: blur(5px);
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.05);
 }
 
+
 .seccion h2 {
+
     text-align: center;
 
     font-size: 35px;
 
     margin-bottom: 40px;
+
+    color: #00d9ff;
+
+    text-shadow:
+        0 0 10px rgba(0, 217, 255, 0.5);
 }
 
 
 /* =========================================
-   ACERCA DE MÍ
+   SOBRE MI
 ========================================= */
 
 .sobre-mi {
+
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 50px;
@@ -183,31 +354,44 @@ nav a:hover {
     margin: auto;
 }
 
+
 .sobre-mi img {
+
     width: 300px;
+
     height: 300px;
 
     object-fit: cover;
 
     border-radius: 50%;
 
-    border: 6px solid #00bfff;
+    border:
+        6px solid #00bfff;
 
     box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.2);
+        0 0 20px #00bfff,
+        0 0 50px rgba(0, 110, 255, 0.5);
 }
 
+
 .texto-sobre-mi {
+
     max-width: 550px;
 }
 
+
 .texto-sobre-mi h3 {
+
     font-size: 28px;
 
     margin-bottom: 15px;
+
+    color: #7bdfff;
 }
 
+
 .texto-sobre-mi p {
+
     margin-bottom: 15px;
 }
 
@@ -217,10 +401,14 @@ nav a:hover {
 ========================================= */
 
 .tarjetas {
+
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
 
     gap: 25px;
 
@@ -229,8 +417,11 @@ nav a:hover {
     margin: auto;
 }
 
+
 .tarjeta {
-    background-color: white;
+
+    background:
+        rgba(10, 15, 45, 0.75);
 
     padding: 30px;
 
@@ -238,21 +429,41 @@ nav a:hover {
 
     text-align: center;
 
+    border:
+        1px solid rgba(0, 191, 255, 0.25);
+
     box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.1);
+        0 0 20px rgba(0, 100, 255, 0.15);
 
     transition: 0.3s;
+
+    backdrop-filter: blur(8px);
 }
+
 
 .tarjeta:hover {
-    transform: translateY(-8px);
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    border-color: #00bfff;
+
+    box-shadow:
+        0 0 25px rgba(0, 191, 255, 0.4);
 }
+
 
 .tarjeta h3 {
+
     margin-bottom: 15px;
+
+    color: #7bdfff;
 }
 
+
 .icono {
+
     font-size: 50px;
 
     display: block;
@@ -266,16 +477,22 @@ nav a:hover {
 ========================================= */
 
 .texto-centro {
+
     text-align: center;
 
     margin-bottom: 25px;
 }
 
+
 .galeria {
+
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
 
     gap: 20px;
 
@@ -284,7 +501,9 @@ nav a:hover {
     margin: auto;
 }
 
+
 .galeria img {
+
     width: 100%;
 
     height: 250px;
@@ -297,12 +516,24 @@ nav a:hover {
 
     transition: 0.3s;
 
+    border:
+        2px solid rgba(0, 191, 255, 0.2);
+
     box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.15);
+        0 0 15px rgba(0, 100, 255, 0.2);
 }
 
+
 .galeria img:hover {
-    transform: scale(1.03);
+
+    transform:
+        scale(1.04);
+
+    border-color:
+        #00bfff;
+
+    box-shadow:
+        0 0 25px #00bfff;
 }
 
 
@@ -311,21 +542,30 @@ nav a:hover {
 ========================================= */
 
 form {
+
     max-width: 650px;
 
     margin: auto;
 
-    background-color: white;
+    background:
+        rgba(10, 15, 45, 0.8);
 
     padding: 30px;
 
     border-radius: 15px;
 
+    border:
+        1px solid rgba(0, 191, 255, 0.3);
+
     box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.1);
+        0 0 25px rgba(0, 100, 255, 0.2);
+
+    backdrop-filter: blur(8px);
 }
 
+
 form label {
+
     display: block;
 
     margin-top: 15px;
@@ -335,33 +575,63 @@ form label {
     font-weight: bold;
 }
 
+
 form input,
 form textarea {
+
     width: 100%;
 
     padding: 12px;
 
-    border: 1px solid #ccc;
+    border:
+        1px solid #555;
 
     border-radius: 7px;
 
     font-size: 16px;
 
     font-family: Arial;
+
+    background:
+        rgba(0, 0, 20, 0.7);
+
+    color: white;
 }
 
+
+form input:focus,
+form textarea:focus {
+
+    outline: none;
+
+    border-color:
+        #00bfff;
+
+    box-shadow:
+        0 0 10px rgba(0, 191, 255, 0.4);
+}
+
+
 form textarea {
+
     resize: vertical;
 }
 
+
 form button {
+
     width: 100%;
 
     margin-top: 20px;
 
     padding: 13px;
 
-    background-color: #00bfff;
+    background:
+        linear-gradient(
+            135deg,
+            #00bfff,
+            #7b00ff
+        );
 
     color: white;
 
@@ -372,10 +642,17 @@ form button {
     font-size: 17px;
 
     cursor: pointer;
+
+    transition: 0.3s;
 }
 
+
 form button:hover {
-    background-color: #008fc7;
+
+    transform: scale(1.02);
+
+    box-shadow:
+        0 0 20px #00bfff;
 }
 
 
@@ -384,6 +661,7 @@ form button:hover {
 ========================================= */
 
 .modal {
+
     display: none;
 
     position: fixed;
@@ -391,28 +669,41 @@ form button:hover {
     z-index: 2000;
 
     left: 0;
+
     top: 0;
 
     width: 100%;
+
     height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color:
+        rgba(0, 0, 10, 0.92);
 
     align-items: center;
+
     justify-content: center;
 }
 
+
 .imagen-modal {
+
     max-width: 90%;
+
     max-height: 85%;
 
     border-radius: 10px;
+
+    box-shadow:
+        0 0 30px #00bfff;
 }
 
+
 .cerrar {
+
     position: absolute;
 
     top: 20px;
+
     right: 35px;
 
     color: white;
@@ -424,25 +715,33 @@ form button:hover {
 
 
 /* =========================================
-   VOLVER ARRIBA
+   BOTÓN ARRIBA
 ========================================= */
 
 #arribaBtn {
+
     display: none;
 
     position: fixed;
 
     right: 25px;
+
     bottom: 25px;
 
     width: 50px;
+
     height: 50px;
 
     border: none;
 
     border-radius: 50%;
 
-    background-color: #00bfff;
+    background:
+        linear-gradient(
+            135deg,
+            #00bfff,
+            #7b00ff
+        );
 
     color: white;
 
@@ -451,10 +750,15 @@ form button:hover {
     cursor: pointer;
 
     z-index: 1000;
+
+    box-shadow:
+        0 0 15px #00bfff;
 }
 
+
 #arribaBtn:hover {
-    background-color: #008fc7;
+
+    transform: scale(1.1);
 }
 
 
@@ -463,40 +767,77 @@ form button:hover {
 ========================================= */
 
 footer {
-    background-color: #111;
+
+    background:
+        rgba(2, 3, 15, 0.95);
 
     color: white;
 
     text-align: center;
 
     padding: 30px;
+
+    border-top:
+        1px solid rgba(0, 191, 255, 0.2);
+}
+
+
+.galaxy-footer {
+
+    margin-top: 10px;
+
+    color: #00d9ff;
+
+    letter-spacing: 3px;
 }
 
 
 /* =========================================
-   MODO OSCURO
+   MODO CLARO
 ========================================= */
 
-body.oscuro {
-    background-color: #121212;
+body.claro {
 
-    color: #eee;
+    color: #222;
+
+    background:
+        #dfefff;
 }
 
-body.oscuro .tarjeta,
-body.oscuro form {
-    background-color: #1e1e1e;
 
-    color: white;
+body.claro .seccion {
+
+    background:
+        rgba(240, 248, 255, 0.75);
+
+    color: #222;
 }
 
-body.oscuro input,
-body.oscuro textarea {
-    background-color: #333;
 
-    color: white;
+body.claro .tarjeta {
 
-    border-color: #555;
+    background:
+        rgba(255, 255, 255, 0.8);
+
+    color: #222;
+}
+
+
+body.claro form {
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    color: #222;
+}
+
+
+body.claro form input,
+body.claro form textarea {
+
+    background: white;
+
+    color: #222;
 }
 
 
@@ -507,38 +848,76 @@ body.oscuro textarea {
 @media (max-width: 768px) {
 
     header {
+
         flex-direction: column;
 
         gap: 15px;
     }
 
+
     nav {
+
         flex-direction: column;
 
         align-items: center;
     }
 
+
+    .hero {
+
+        min-height: 80vh;
+    }
+
+
+    .hero-contenido {
+
+        padding: 30px 20px;
+    }
+
+
     .hero h1 {
+
         font-size: 35px;
     }
 
+
     .hero p {
+
         font-size: 17px;
     }
 
+
+    .planeta {
+
+        font-size: 55px;
+    }
+
+
     .sobre-mi {
+
         flex-direction: column;
 
         text-align: center;
     }
 
+
     .sobre-mi img {
+
         width: 230px;
+
         height: 230px;
     }
 
+
     .seccion {
+
         padding: 50px 5%;
+    }
+
+
+    .galeria img {
+
+        height: 220px;
     }
 
 }
