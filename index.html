@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
 
     <!-- ENCABEZADO -->
     <header>
+
         <div class="logo">
             Aaron Avila
         </div>
@@ -29,6 +31,7 @@
         <button id="modoBtn" onclick="cambiarModo()">
             🌙 Modo oscuro
         </button>
+
     </header>
 
 
@@ -61,8 +64,8 @@
         <div class="sobre-mi">
 
             <img
-                src="foto1.png"
-                alt="Foto personal de Aaron"
+                src="imagenes/foto1.png"
+                alt="Foto personal de Aaron Avila"
             >
 
             <div class="texto-sobre-mi">
@@ -98,6 +101,7 @@
         <div class="tarjetas">
 
             <div class="tarjeta">
+
                 <span class="icono">💻</span>
 
                 <h3>Tecnología</h3>
@@ -106,10 +110,12 @@
                     Me interesa aprender sobre computadoras,
                     programación, desarrollo web y nuevas tecnologías.
                 </p>
+
             </div>
 
 
             <div class="tarjeta">
+
                 <span class="icono">🎮</span>
 
                 <h3>Videojuegos</h3>
@@ -119,10 +125,12 @@
                     de entretenimiento y también me interesan
                     sus aspectos tecnológicos.
                 </p>
+
             </div>
 
 
             <div class="tarjeta">
+
                 <span class="icono">🎬</span>
 
                 <h3>Películas</h3>
@@ -131,6 +139,7 @@
                     También disfruto conocer diferentes películas,
                     historias y géneros cinematográficos.
                 </p>
+
             </div>
 
         </div>
@@ -198,37 +207,37 @@
         <div class="galeria">
 
             <img
-                src="foto1.png"
+                src="imagenes/foto1.png"
                 alt="Foto personal"
                 onclick="abrirImagen(this)"
             >
 
             <img
-                src="foto2.jpeg"
+                src="imagenes/foto2.jpeg"
                 alt="Fotografía personal"
                 onclick="abrirImagen(this)"
             >
 
             <img
-                src="foto3.jpg"
+                src="imagenes/foto3.jpg"
                 alt="Tecnología"
                 onclick="abrirImagen(this)"
             >
 
             <img
-                src="foto4.png"
+                src="imagenes/foto4.png"
                 alt="Videojuegos"
                 onclick="abrirImagen(this)"
             >
 
             <img
-                src="foto5.jpg"
+                src="imagenes/foto5.jpg"
                 alt="Películas"
                 onclick="abrirImagen(this)"
             >
 
             <img
-                src="foto6.jpg"
+                src="imagenes/foto6.jpg"
                 alt="Proyecto personal"
                 onclick="abrirImagen(this)"
             >
@@ -260,7 +269,6 @@
                 required
             >
 
-
             <label for="correo">
                 Correo electrónico:
             </label>
@@ -271,7 +279,6 @@
                 placeholder="ejemplo@correo.com"
                 required
             >
-
 
             <label for="mensaje">
                 Mensaje:
@@ -284,7 +291,6 @@
                 required
             ></textarea>
 
-
             <button type="submit">
                 Enviar mensaje
             </button>
@@ -294,7 +300,7 @@
     </section>
 
 
-    <!-- MODAL PARA IMÁGENES -->
+    <!-- MODAL DE IMAGEN -->
     <div
         id="modalImagen"
         class="modal"
@@ -339,4 +345,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
