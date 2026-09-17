@@ -12,336 +12,389 @@
 
 <body>
 
-    <!-- ENCABEZADO -->
-    <header>
+    <!-- FONDO DE GALAXIA -->
+    <canvas id="galaxyCanvas"></canvas>
 
-        <div class="logo">
-            Aaron Avila
-        </div>
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="contenido">
 
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Acerca de mí</a>
-            <a href="#intereses">Intereses</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#galeria">Galería</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+        <!-- ENCABEZADO -->
+        <header>
 
-        <button id="modoBtn" onclick="cambiarModo()">
-            🌙 Modo oscuro
-        </button>
+            <div class="logo">
+                Aaron Avila
+            </div>
 
-    </header>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre-mi">Acerca de mí</a>
+                <a href="#intereses">Intereses</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#galeria">Galería</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <button id="modoBtn" onclick="cambiarModo()">
+                🌙 Modo oscuro
+            </button>
+
+        </header>
 
 
-    <!-- INICIO -->
-    <section id="inicio" class="hero">
+        <!-- INICIO -->
+        <section id="inicio" class="hero">
 
-        <div class="hero-contenido">
+            <div class="hero-contenido">
 
-            <h1>Bienvenido a mi sitio web</h1>
+                <div class="planeta">🪐</div>
 
-            <p>
-                Hola, soy Aaron Avila. Este es mi sitio personal
-                desarrollado utilizando HTML, CSS y JavaScript.
+                <h1>
+                    Bienvenido a mi sitio web
+                </h1>
+
+                <p>
+                    Hola, soy Aaron Avila. Este es mi sitio personal
+                    desarrollado utilizando HTML, CSS y JavaScript.
+                </p>
+
+                <button onclick="saludar()">
+                    Conocerme
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACERCA DE MÍ -->
+        <section id="sobre-mi" class="seccion">
+
+            <h2>
+                Acerca de mí
+            </h2>
+
+            <div class="sobre-mi">
+
+                <img
+                    src="imagenes/foto1.png"
+                    alt="Foto personal de Aaron Avila"
+                >
+
+                <div class="texto-sobre-mi">
+
+                    <h3>
+                        Hola, soy Aaron
+                    </h3>
+
+                    <p>
+                        Soy estudiante de Ingeniería en Tecnologías
+                        Computacionales. Me interesa la tecnología,
+                        el desarrollo de páginas web y la programación.
+                    </p>
+
+                    <p>
+                        En este sitio comparto algunos de mis intereses,
+                        hobbies y proyectos relacionados con mi formación
+                        académica y personal.
+                    </p>
+
+                    <p id="fechaHora"></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERESES -->
+        <section id="intereses" class="seccion">
+
+            <h2>
+                Mis intereses y hobbies
+            </h2>
+
+            <div class="tarjetas">
+
+                <div class="tarjeta">
+
+                    <span class="icono">
+                        💻
+                    </span>
+
+                    <h3>
+                        Tecnología
+                    </h3>
+
+                    <p>
+                        Me interesa aprender sobre computadoras,
+                        programación, desarrollo web y nuevas tecnologías.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <span class="icono">
+                        🎮
+                    </span>
+
+                    <h3>
+                        Videojuegos
+                    </h3>
+
+                    <p>
+                        Los videojuegos son una de mis formas favoritas
+                        de entretenimiento y también me interesan sus
+                        aspectos tecnológicos.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <span class="icono">
+                        🎬
+                    </span>
+
+                    <h3>
+                        Películas
+                    </h3>
+
+                    <p>
+                        También disfruto conocer diferentes películas,
+                        historias y géneros cinematográficos.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="seccion">
+
+            <h2>
+                Mis proyectos
+            </h2>
+
+            <div class="tarjetas">
+
+                <div class="tarjeta">
+
+                    <h3>
+                        🌐 Desarrollo web
+                    </h3>
+
+                    <p>
+                        Creación de páginas web utilizando HTML,
+                        CSS y JavaScript.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <h3>
+                        💻 Programación
+                    </h3>
+
+                    <p>
+                        Desarrollo de ejercicios y proyectos
+                        relacionados con programación y sistemas.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <h3>
+                        🎓 Proyectos académicos
+                    </h3>
+
+                    <p>
+                        Trabajos y actividades realizados durante
+                        mi formación en Ingeniería en Tecnologías
+                        Computacionales.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALERÍA -->
+        <section id="galeria" class="seccion">
+
+            <h2>
+                Mi galería
+            </h2>
+
+            <p class="texto-centro">
+                Haz clic sobre una imagen para verla más grande.
             </p>
 
-            <button onclick="saludar()">
-                Conocerme
-            </button>
+            <div class="galeria">
 
-        </div>
+                <img
+                    src="imagenes/foto1.png"
+                    alt="Foto personal"
+                    onclick="abrirImagen(this)"
+                >
 
-    </section>
+                <img
+                    src="imagenes/foto2.jpeg"
+                    alt="Fotografía personal"
+                    onclick="abrirImagen(this)"
+                >
 
+                <img
+                    src="imagenes/foto3.jpg"
+                    alt="Tecnología"
+                    onclick="abrirImagen(this)"
+                >
 
-    <!-- ACERCA DE MÍ -->
-    <section id="sobre-mi" class="seccion">
+                <img
+                    src="imagenes/foto4.png"
+                    alt="Videojuegos"
+                    onclick="abrirImagen(this)"
+                >
 
-        <h2>Acerca de mí</h2>
+                <img
+                    src="imagenes/foto5.jpg"
+                    alt="Películas"
+                    onclick="abrirImagen(this)"
+                >
 
-        <div class="sobre-mi">
-
-            <img
-                src="imagenes/foto1.png"
-                alt="Foto personal de Aaron Avila"
-            >
-
-            <div class="texto-sobre-mi">
-
-                <h3>Hola, soy Aaron</h3>
-
-                <p>
-                    Soy estudiante de Ingeniería en Tecnologías
-                    Computacionales. Me interesa la tecnología,
-                    el desarrollo de páginas web y la programación.
-                </p>
-
-                <p>
-                    En este sitio comparto algunos de mis intereses,
-                    hobbies y proyectos relacionados con mi formación
-                    académica y personal.
-                </p>
-
-                <p id="fechaHora"></p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- INTERESES -->
-    <section id="intereses" class="seccion">
-
-        <h2>Mis intereses y hobbies</h2>
-
-        <div class="tarjetas">
-
-            <div class="tarjeta">
-
-                <span class="icono">💻</span>
-
-                <h3>Tecnología</h3>
-
-                <p>
-                    Me interesa aprender sobre computadoras,
-                    programación, desarrollo web y nuevas tecnologías.
-                </p>
+                <img
+                    src="imagenes/foto6.jpg"
+                    alt="Proyecto personal"
+                    onclick="abrirImagen(this)"
+                >
 
             </div>
 
-
-            <div class="tarjeta">
-
-                <span class="icono">🎮</span>
-
-                <h3>Videojuegos</h3>
-
-                <p>
-                    Los videojuegos son una de mis formas favoritas
-                    de entretenimiento y también me interesan
-                    sus aspectos tecnológicos.
-                </p>
-
-            </div>
+        </section>
 
 
-            <div class="tarjeta">
+        <!-- CONTACTO -->
+        <section id="contacto" class="seccion">
 
-                <span class="icono">🎬</span>
+            <h2>
+                Contacto
+            </h2>
 
-                <h3>Películas</h3>
+            <p class="texto-centro">
+                Puedes utilizar este formulario para enviar un mensaje.
+            </p>
 
-                <p>
-                    También disfruto conocer diferentes películas,
-                    historias y géneros cinematográficos.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROYECTOS -->
-    <section id="proyectos" class="seccion">
-
-        <h2>Mis proyectos</h2>
-
-        <div class="tarjetas">
-
-            <div class="tarjeta">
-
-                <h3>🌐 Desarrollo web</h3>
-
-                <p>
-                    Creación de páginas web utilizando HTML,
-                    CSS y JavaScript.
-                </p>
-
-            </div>
-
-
-            <div class="tarjeta">
-
-                <h3>💻 Programación</h3>
-
-                <p>
-                    Desarrollo de ejercicios y proyectos
-                    relacionados con programación y sistemas.
-                </p>
-
-            </div>
-
-
-            <div class="tarjeta">
-
-                <h3>🎓 Proyectos académicos</h3>
-
-                <p>
-                    Trabajos y actividades realizados durante
-                    mi formación en Ingeniería en Tecnologías
-                    Computacionales.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- GALERÍA -->
-    <section id="galeria" class="seccion">
-
-        <h2>Mi galería</h2>
-
-        <p class="texto-centro">
-            Haz clic sobre una imagen para verla más grande.
-        </p>
-
-        <div class="galeria">
-
-            <img
-                src="imagenes/foto1.png"
-                alt="Foto personal"
-                onclick="abrirImagen(this)"
+            <form
+                id="formularioContacto"
+                onsubmit="enviarFormulario(event)"
             >
 
-            <img
-                src="imagenes/foto2.jpeg"
-                alt="Fotografía personal"
-                onclick="abrirImagen(this)"
-            >
+                <label for="nombre">
+                    Nombre:
+                </label>
 
-            <img
-                src="imagenes/foto3.jpg"
-                alt="Tecnología"
-                onclick="abrirImagen(this)"
-            >
-
-            <img
-                src="imagenes/foto4.png"
-                alt="Videojuegos"
-                onclick="abrirImagen(this)"
-            >
-
-            <img
-                src="imagenes/foto5.jpg"
-                alt="Películas"
-                onclick="abrirImagen(this)"
-            >
-
-            <img
-                src="imagenes/foto6.jpg"
-                alt="Proyecto personal"
-                onclick="abrirImagen(this)"
-            >
-
-        </div>
-
-    </section>
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Escribe tu nombre"
+                    required
+                >
 
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="seccion">
+                <label for="correo">
+                    Correo electrónico:
+                </label>
 
-        <h2>Contacto</h2>
-
-        <p class="texto-centro">
-            Puedes utilizar este formulario para enviar un mensaje.
-        </p>
-
-        <form id="formularioContacto" onsubmit="enviarFormulario(event)">
-
-            <label for="nombre">
-                Nombre:
-            </label>
-
-            <input
-                type="text"
-                id="nombre"
-                placeholder="Escribe tu nombre"
-                required
-            >
-
-            <label for="correo">
-                Correo electrónico:
-            </label>
-
-            <input
-                type="email"
-                id="correo"
-                placeholder="ejemplo@correo.com"
-                required
-            >
-
-            <label for="mensaje">
-                Mensaje:
-            </label>
-
-            <textarea
-                id="mensaje"
-                rows="5"
-                placeholder="Escribe tu mensaje"
-                required
-            ></textarea>
-
-            <button type="submit">
-                Enviar mensaje
-            </button>
-
-        </form>
-
-    </section>
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="ejemplo@correo.com"
+                    required
+                >
 
 
-    <!-- MODAL DE IMAGEN -->
-    <div
-        id="modalImagen"
-        class="modal"
-        onclick="cerrarImagen()"
-    >
+                <label for="mensaje">
+                    Mensaje:
+                </label>
 
-        <span class="cerrar">
-            &times;
-        </span>
+                <textarea
+                    id="mensaje"
+                    rows="5"
+                    placeholder="Escribe tu mensaje"
+                    required
+                ></textarea>
 
-        <img
-            id="imagenGrande"
-            class="imagen-modal"
-            alt="Imagen ampliada"
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- MODAL DE IMÁGENES -->
+        <div
+            id="modalImagen"
+            class="modal"
+            onclick="cerrarImagen()"
         >
+
+            <span class="cerrar">
+                &times;
+            </span>
+
+            <img
+                id="imagenGrande"
+                class="imagen-modal"
+                alt="Imagen ampliada"
+            >
+
+        </div>
+
+
+        <!-- BOTÓN VOLVER ARRIBA -->
+        <button
+            id="arribaBtn"
+            onclick="volverArriba()"
+            title="Volver arriba"
+        >
+            ↑
+        </button>
+
+
+        <!-- PIE DE PÁGINA -->
+        <footer>
+
+            <p>
+                © 2026 Aaron Avila - Sitio web personal
+            </p>
+
+            <p id="horaFooter"></p>
+
+            <p class="galaxy-footer">
+                ✦ Explora mi universo ✦
+            </p>
+
+        </footer>
 
     </div>
 
 
-    <!-- BOTÓN VOLVER ARRIBA -->
-    <button
-        id="arribaBtn"
-        onclick="volverArriba()"
-        title="Volver arriba"
-    >
-        ↑
-    </button>
-
-
-    <!-- PIE DE PÁGINA -->
-    <footer>
-
-        <p>
-            © 2026 Aaron Avila - Sitio web personal
-        </p>
-
-        <p id="horaFooter"></p>
-
-    </footer>
-
-
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
