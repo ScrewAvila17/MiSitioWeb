@@ -2,9 +2,11 @@
    MENSAJE DE BIENVENIDA
 ========================================= */
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
 
-    console.log("Bienvenido al sitio web de Aaron Avila");
+    console.log(
+        "Bienvenido al sitio web de Aaron Avila"
+    );
 
 });
 
@@ -17,7 +19,8 @@ function saludar() {
 
     alert(
         "¡Hola! Gracias por visitar mi sitio personal. " +
-        "Aquí podrás conocer un poco más sobre mí, mis intereses y mis proyectos."
+        "Aquí podrás conocer un poco más sobre mí, " +
+        "mis intereses y mis proyectos."
     );
 
 }
@@ -31,34 +34,49 @@ function actualizarFechaHora() {
 
     const ahora = new Date();
 
-    const fecha = ahora.toLocaleDateString("es-MX");
+    const fecha =
+        ahora.toLocaleDateString("es-MX");
 
-    const hora = ahora.toLocaleTimeString("es-MX");
+    const hora =
+        ahora.toLocaleTimeString("es-MX");
 
-    const elemento = document.getElementById("fechaHora");
+    const elemento =
+        document.getElementById("fechaHora");
 
-    const footer = document.getElementById("horaFooter");
+    const footer =
+        document.getElementById("horaFooter");
+
 
     if (elemento) {
 
         elemento.innerHTML =
             "<strong>Fecha y hora actual:</strong> " +
-            fecha + " - " + hora;
+            fecha +
+            " - " +
+            hora;
 
     }
+
 
     if (footer) {
 
         footer.innerHTML =
-            "Fecha y hora: " + fecha + " - " + hora;
+            "Fecha y hora: " +
+            fecha +
+            " - " +
+            hora;
 
     }
 
 }
 
+
 actualizarFechaHora();
 
-setInterval(actualizarFechaHora, 1000);
+setInterval(
+    actualizarFechaHora,
+    1000
+);
 
 
 /* =========================================
@@ -69,15 +87,21 @@ function cambiarModo() {
 
     document.body.classList.toggle("oscuro");
 
-    const boton = document.getElementById("modoBtn");
+    const boton =
+        document.getElementById("modoBtn");
 
-    if (document.body.classList.contains("oscuro")) {
 
-        boton.innerHTML = "☀️ Modo claro";
+    if (
+        document.body.classList.contains("oscuro")
+    ) {
+
+        boton.innerHTML =
+            "☀️ Modo claro";
 
     } else {
 
-        boton.innerHTML = "🌙 Modo oscuro";
+        boton.innerHTML =
+            "🌙 Modo oscuro";
 
     }
 
@@ -85,28 +109,40 @@ function cambiarModo() {
 
 
 /* =========================================
-   GALERÍA AMPLIADA
+   ABRIR IMAGEN
 ========================================= */
 
 function abrirImagen(imagen) {
 
-    const modal = document.getElementById("modalImagen");
+    const modal =
+        document.getElementById("modalImagen");
 
     const imagenGrande =
         document.getElementById("imagenGrande");
 
-    imagenGrande.src = imagen.src;
 
-    imagenGrande.alt = imagen.alt;
+    imagenGrande.src =
+        imagen.src;
 
-    modal.style.display = "flex";
+    imagenGrande.alt =
+        imagen.alt;
+
+
+    modal.style.display =
+        "flex";
 
 }
 
 
+/* =========================================
+   CERRAR IMAGEN
+========================================= */
+
 function cerrarImagen() {
 
-    document.getElementById("modalImagen").style.display = "none";
+    document.getElementById(
+        "modalImagen"
+    ).style.display = "none";
 
 }
 
@@ -115,23 +151,33 @@ function cerrarImagen() {
    BOTÓN VOLVER ARRIBA
 ========================================= */
 
-window.addEventListener("scroll", function() {
+window.addEventListener(
+    "scroll",
+    function () {
 
-    const boton =
-        document.getElementById("arribaBtn");
+        const boton =
+            document.getElementById("arribaBtn");
 
-    if (window.scrollY > 400) {
 
-        boton.style.display = "block";
+        if (window.scrollY > 400) {
 
-    } else {
+            boton.style.display =
+                "block";
 
-        boton.style.display = "none";
+        } else {
+
+            boton.style.display =
+                "none";
+
+        }
 
     }
+);
 
-});
 
+/* =========================================
+   VOLVER ARRIBA
+========================================= */
 
 function volverArriba() {
 
@@ -147,20 +193,24 @@ function volverArriba() {
 
 
 /* =========================================
-   FORMULARIO DE CONTACTO
+   FORMULARIO
 ========================================= */
 
 function enviarFormulario(event) {
 
     event.preventDefault();
 
+
     const nombre =
         document.getElementById("nombre").value;
 
+
     alert(
-        "¡Gracias, " + nombre +
+        "¡Gracias, " +
+        nombre +
         "! Tu mensaje fue recibido correctamente."
     );
+
 
     document.getElementById(
         "formularioContacto"
