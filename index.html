@@ -1,52 +1,342 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio personal - Aaron Avila</title>
 
-    <title>Mi sitio personal</title>
-
-    <link rel="stylesheet"
-          href="estilos.css">
-
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
+    <!-- ENCABEZADO -->
     <header>
-
-        <h1>Aaron Avila</h1>
+        <div class="logo">
+            Aaron Avila
+        </div>
 
         <nav>
-
             <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#sobre-mi">Acerca de mí</a>
             <a href="#intereses">Intereses</a>
+            <a href="#proyectos">Proyectos</a>
             <a href="#galeria">Galería</a>
             <a href="#contacto">Contacto</a>
-
         </nav>
 
+        <button id="modoBtn" onclick="cambiarModo()">
+            🌙 Modo oscuro
+        </button>
     </header>
 
-    <main>
 
-        <section id="inicio">
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
 
-            <h2>Bienvenido a mi sitio web</h2>
+        <div class="hero-contenido">
+
+            <h1>Bienvenido a mi sitio web</h1>
 
             <p>
-                Este es mi sitio web personal.
+                Hola, soy Aaron Avila. Este es mi sitio personal
+                desarrollado utilizando HTML, CSS y JavaScript.
             </p>
 
-        </section>
+            <button onclick="saludar()">
+                Conocerme
+            </button>
 
-    </main>
+        </div>
+
+    </section>
+
+
+    <!-- ACERCA DE MÍ -->
+    <section id="sobre-mi" class="seccion">
+
+        <h2>Acerca de mí</h2>
+
+        <div class="sobre-mi">
+
+            <img
+                src="imagenes/foto1.png"
+                alt="Foto personal de Aaron"
+            >
+
+            <div class="texto-sobre-mi">
+
+                <h3>Hola, soy Aaron</h3>
+
+                <p>
+                    Soy estudiante de Ingeniería en Tecnologías
+                    Computacionales. Me interesa la tecnología,
+                    el desarrollo de páginas web y la programación.
+                </p>
+
+                <p>
+                    En este sitio comparto algunos de mis intereses,
+                    hobbies y proyectos relacionados con mi formación
+                    académica y personal.
+                </p>
+
+                <p id="fechaHora"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTERESES -->
+    <section id="intereses" class="seccion">
+
+        <h2>Mis intereses y hobbies</h2>
+
+        <div class="tarjetas">
+
+            <div class="tarjeta">
+                <span class="icono">💻</span>
+
+                <h3>Tecnología</h3>
+
+                <p>
+                    Me interesa aprender sobre computadoras,
+                    programación, desarrollo web y nuevas tecnologías.
+                </p>
+            </div>
+
+
+            <div class="tarjeta">
+                <span class="icono">🎮</span>
+
+                <h3>Videojuegos</h3>
+
+                <p>
+                    Los videojuegos son una de mis formas favoritas
+                    de entretenimiento y también me interesan
+                    sus aspectos tecnológicos.
+                </p>
+            </div>
+
+
+            <div class="tarjeta">
+                <span class="icono">🎬</span>
+
+                <h3>Películas</h3>
+
+                <p>
+                    También disfruto conocer diferentes películas,
+                    historias y géneros cinematográficos.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="seccion">
+
+        <h2>Mis proyectos</h2>
+
+        <div class="tarjetas">
+
+            <div class="tarjeta">
+
+                <h3>🌐 Desarrollo web</h3>
+
+                <p>
+                    Creación de páginas web utilizando HTML,
+                    CSS y JavaScript.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <h3>💻 Programación</h3>
+
+                <p>
+                    Desarrollo de ejercicios y proyectos
+                    relacionados con programación y sistemas.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <h3>🎓 Proyectos académicos</h3>
+
+                <p>
+                    Trabajos y actividades realizados durante
+                    mi formación en Ingeniería en Tecnologías
+                    Computacionales.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="seccion">
+
+        <h2>Mi galería</h2>
+
+        <p class="texto-centro">
+            Haz clic sobre una imagen para verla más grande.
+        </p>
+
+        <div class="galeria">
+
+            <img
+                src="imagenes/foto1.png"
+                alt="Foto personal"
+                onclick="abrirImagen(this)"
+            >
+
+            <img
+                src="imagenes/foto2.jpeg"
+                alt="Fotografía personal"
+                onclick="abrirImagen(this)"
+            >
+
+            <img
+                src="imagenes/foto3.jpg"
+                alt="Tecnología"
+                onclick="abrirImagen(this)"
+            >
+
+            <img
+                src="imagenes/foto4.png"
+                alt="Videojuegos"
+                onclick="abrirImagen(this)"
+            >
+
+            <img
+                src="imagenes/foto5.jpg"
+                alt="Películas"
+                onclick="abrirImagen(this)"
+            >
+
+            <img
+                src="imagenes/foto6.jpg"
+                alt="Proyecto personal"
+                onclick="abrirImagen(this)"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="seccion">
+
+        <h2>Contacto</h2>
+
+        <p class="texto-centro">
+            Puedes utilizar este formulario para enviar un mensaje.
+        </p>
+
+        <form id="formularioContacto" onsubmit="enviarFormulario(event)">
+
+            <label for="nombre">
+                Nombre:
+            </label>
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Escribe tu nombre"
+                required
+            >
+
+
+            <label for="correo">
+                Correo electrónico:
+            </label>
+
+            <input
+                type="email"
+                id="correo"
+                placeholder="ejemplo@correo.com"
+                required
+            >
+
+
+            <label for="mensaje">
+                Mensaje:
+            </label>
+
+            <textarea
+                id="mensaje"
+                rows="5"
+                placeholder="Escribe tu mensaje"
+                required
+            ></textarea>
+
+
+            <button type="submit">
+                Enviar mensaje
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- MODAL PARA IMÁGENES -->
+    <div
+        id="modalImagen"
+        class="modal"
+        onclick="cerrarImagen()"
+    >
+
+        <span class="cerrar">
+            &times;
+        </span>
+
+        <img
+            id="imagenGrande"
+            class="imagen-modal"
+            alt="Imagen ampliada"
+        >
+
+    </div>
+
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <button
+        id="arribaBtn"
+        onclick="volverArriba()"
+        title="Volver arriba"
+    >
+        ↑
+    </button>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            © 2026 Aaron Avila - Sitio web personal
+        </p>
+
+        <p id="horaFooter"></p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
-
 </html>
